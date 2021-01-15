@@ -34,6 +34,7 @@ This is a full stack web app development challenge. In this challenge I will try
 | Netlify         |
 | Mongodb Atlas   |
 | AWS             |
+| pantheon        |
 
 ### Todos
 
