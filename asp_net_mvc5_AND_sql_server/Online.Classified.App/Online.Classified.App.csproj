@@ -88,6 +88,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AradaLejDB.mdf" />
+    <Content Include="App_Data\AradaLejDB_log.ldf">
+      <DependentUpon>AradaLejDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\prettyPhoto.css" />
+    <Content Include="Content\css\price-range.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\home\bg_border.png" />
+    <Content Include="Content\images\home\girl1.jpg" />
+    <Content Include="Content\images\home\girl2.jpg" />
+    <Content Include="Content\images\home\girl3.jpg" />
+    <Content Include="Content\images\home\logo.png" />
+    <Content Include="Content\images\home\new.png" />
+    <Content Include="Content\images\home\pricing.png" />
+    <Content Include="Content\images\home\searchicon.png" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\contact.js" />
+    <Content Include="Content\js\gmaps.js" />
+    <Content Include="Content\js\html5shiv.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.prettyPhoto.js" />
+    <Content Include="Content\js\jquery.scrollUp.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\price-range.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -101,7 +131,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\OnlineClassifiedApp20210114211755 - Web Deploy.pubxml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,7 +147,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

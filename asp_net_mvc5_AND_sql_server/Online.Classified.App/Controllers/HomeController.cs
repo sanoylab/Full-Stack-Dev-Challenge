@@ -8,9 +8,9 @@ namespace Online.Classified.App.Controllers
 {
     public class HomeController: Controller
     {
-        public string Index()
+        public ActionResult Index()
         {
-            return "ASP.NET MVC 5 APP";
+            return View();
         }
     }
 }

@@ -70,10 +70,6 @@ C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\Online.Classified.App\obj\Debug\Online.Classified.App.csproj.CopyComplete
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\Online.Classified.App\obj\Debug\Online.Classified.App.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\Online.Classified.App\obj\Debug\Online.Classified.App.pdb
-C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.csprojAssemblyReference.cache
-C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.csproj.CoreCompileInputs.cache
-C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.dll
-C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.pdb
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\Online.Classified.App.dll.config
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\Online.Classified.App.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\Online.Classified.App.pdb
@@ -141,4 +137,7 @@ C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Helpers.xml
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Mvc.xml
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.csproj.CoreCompileInputs.cache
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.csproj.CopyComplete
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.dll
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.pdb
