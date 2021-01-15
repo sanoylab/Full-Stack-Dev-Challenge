@@ -141,3 +141,4 @@ C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.csproj.CopyComplete
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.pdb
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Debug\Online.Classified.App.csprojAssemblyReference.cache
