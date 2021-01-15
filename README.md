@@ -24,7 +24,7 @@ This is a full stack web app development challenge. In this challenge I will try
 - PHP Demo:
 - Drupal Demo:
 
-### Cloud Plateform Used
+## Cloud Plateform Used
 
 | Plateform       |
 | --------------- |
