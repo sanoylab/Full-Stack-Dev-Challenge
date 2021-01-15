@@ -7,6 +7,7 @@ This is a full stack web app development challenge. In this challenge I will try
   - ASP.net MVC 5
   - ASP.net Core
   - ASP.net Web API
+  - SQL Server
   - MERN Stack (MongoDB, Express, React, Node)
   - PHP
   - Drupal CMS
