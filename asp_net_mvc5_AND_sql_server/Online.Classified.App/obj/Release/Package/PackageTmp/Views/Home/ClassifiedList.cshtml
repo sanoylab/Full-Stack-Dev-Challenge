@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Online.Classified.App.Models.Classified>
+
+@foreach (var item in Model)
+{
+
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
+                    <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
+                    <p> @Html.DisplayFor(modelItem => item.Title)</p>
+                    <a href="/detail/@Html.DisplayFor(modelItem => item.Id)" class="btn btn-default add-to-cart">View Detail</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+}

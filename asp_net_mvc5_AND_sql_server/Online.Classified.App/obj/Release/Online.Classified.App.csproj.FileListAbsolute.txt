@@ -70,3 +70,7 @@ C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Release\Online.Classified.App.csproj.CopyComplete
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Release\Online.Classified.App.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\obj\Release\Online.Classified.App.pdb
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.dll
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.SqlServer.dll
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.xml
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.SqlServer.xml

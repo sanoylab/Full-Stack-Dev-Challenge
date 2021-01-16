@@ -2,68 +2,42 @@
 @{
     ViewBag.Title = "Home Page";
 }
+@model IEnumerable<Online.Classified.App.Models.Classified>
+
+
 
 <div class="col-sm-12 padding-right">
     <div class="features_items">
         <!--features_items-->
         <h2 class="title text-center">Recent Houses</h2>
-        <div class="col-sm-3">
-            <div class="product-image-wrapper">
-                <div class="single-products">
-                    <div class="productinfo text-center">
-                        <img src="images/home/product1.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                    </div>
 
+       
+
+            @foreach (var item in Model)
+            {
+
+                <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
+                                <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
+                                <p> @Html.DisplayFor(modelItem => item.Title)</p>
+                                <a href="/detail/@Html.DisplayFor(modelItem => item.Id)" class="btn btn-default add-to-cart">View Detail</a>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
 
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="product-image-wrapper">
-                <div class="single-products">
-                    <div class="productinfo text-center">
-                        <img src="images/home/product2.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                    </div>
 
-                </div>
 
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="product-image-wrapper">
-                <div class="single-products">
-                    <div class="productinfo text-center">
-                        <img src="images/home/product3.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                    </div>
 
-                </div>
+            }
+        }
 
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="product-image-wrapper">
-                <div class="single-products">
-                    <div class="productinfo text-center">
-                        <img src="images/home/product4.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                    </div>
 
-                    <img src="images/home/new.png" class="new" alt="" />
-                </div>
-
-            </div>
-        </div>
 
 
     </div><!--features_items-->

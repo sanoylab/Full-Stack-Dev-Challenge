@@ -1,2 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters />
+<parameters>
+  <parameter name="AradaLejDBContext1111-Web.config Connection String" description="AradaLejDBContext1111 Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|AradaLejDB.mdf;Integrated Security=True;Connect Timeout=30" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\exper\\Desktop\\Dev\\Full\ Stack\ Dev\ Challenge\\Working\\asp_net_mvc5\\Online\.Classified\.App\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AradaLejDBContext1111']/@connectionString" />
+  </parameter>
+  <parameter name="AradaLejDBContext-Web.config Connection String" description="AradaLejDBContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=onlineclassified.database.windows.net;Initial Catalog=AradaLejDB;Persist Security Info=False;User ID=onlineclassifiedadmin; Password=P@ssw0rd" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\exper\\Desktop\\Dev\\Full\ Stack\ Dev\ Challenge\\Working\\asp_net_mvc5\\Online\.Classified\.App\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AradaLejDBContext']/@connectionString" />
+  </parameter>
+</parameters>

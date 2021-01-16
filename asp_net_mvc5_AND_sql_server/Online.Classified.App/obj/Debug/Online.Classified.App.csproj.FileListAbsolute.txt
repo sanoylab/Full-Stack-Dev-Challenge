@@ -122,6 +122,8 @@ C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\roslyn\vbc.rsp
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\roslyn\VBCSCompiler.exe
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.dll
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.SqlServer.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Helpers.dll
@@ -130,6 +132,8 @@ C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Webpages.Deployment.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Webpages.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Webpages.Razor.dll
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.xml
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\EntityFramework.SqlServer.xml
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Razor.xml
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Webpages.xml
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_mvc5\Online.Classified.App\bin\System.Web.Webpages.Deployment.xml
