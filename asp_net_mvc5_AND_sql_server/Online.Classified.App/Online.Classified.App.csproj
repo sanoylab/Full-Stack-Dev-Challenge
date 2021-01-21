@@ -111,6 +111,9 @@
     <Content Include="Content\images\home\girl1.jpg" />
     <Content Include="Content\images\home\girl2.jpg" />
     <Content Include="Content\images\home\girl3.jpg" />
+    <Content Include="Content\images\home\girl4.jpg" />
+    <Content Include="Content\images\home\girl5.jpg" />
+    <Content Include="Content\images\home\girl6.jpg" />
     <Content Include="Content\images\home\logo.png" />
     <Content Include="Content\images\home\new.png" />
     <Content Include="Content\images\home\pricing.png" />
@@ -129,11 +132,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClassifiedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AradaLejDBContext.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Classified.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -148,6 +153,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ClassifiedList.cshtml" />
+    <Content Include="Views\Classified\Categories.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Classified\Index.cshtml" />
+    <Content Include="Views\Classified\Detail.cshtml" />
+    <Content Include="Views\Classified\MyAds.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

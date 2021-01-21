@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Online.Classified.App.Models.Classified>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <h2 class="title text-center">@Request.QueryString["name"]</h2>
+
+            @foreach (var item in Model)
+            {
+
+                <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
+                                <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
+                                <p> @Html.DisplayFor(modelItem => item.Title)</p>
+                                @Html.ActionLink("View Detail", "Detail", new { @id = item.Id }, new { @class = "btn btn-default add-to-cart" })
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            }
+        </div>
+    </div>
+
+
+</section>
+
+

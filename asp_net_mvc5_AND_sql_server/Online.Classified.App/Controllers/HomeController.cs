@@ -27,9 +27,10 @@ namespace Online.Classified.App.Controllers
                 return PartialView(classifieds);
                 //return Json(new { data = classifieds }, JsonRequestBehavior.AllowGet);
             }
-
-
-
+        }
+        public ActionResult Contact()
+        {
+            return View();
         }
     }
 }

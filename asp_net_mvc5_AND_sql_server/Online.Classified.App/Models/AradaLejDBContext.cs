@@ -9,5 +9,6 @@ namespace Online.Classified.App.Models
     public class AradaLejDBContext : DbContext
     {
         public DbSet<Classified> Classified { get; set; }
+        public DbSet<Category> Category { get; set; }
     }
 }

@@ -15,7 +15,7 @@ This is a full stack web app development challenge. In this challenge I will try
 
 # DEMOS
 
-- ASP.net MVC 5 Demo: https://onlineclassifiedapp20210114211755.azurewebsites.net/
+- ASP.net MVC 5 Demo: http://aspnetmvc5.aradalej.com
 - ASP.net Web Form Demo:
 - ASP.net Core Demo:
 - ASP.net Web API Demo:
