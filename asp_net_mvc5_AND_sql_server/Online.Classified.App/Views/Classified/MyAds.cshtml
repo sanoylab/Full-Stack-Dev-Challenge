@@ -70,9 +70,9 @@
                 {
                     render: function (data, type, JsonResultRow, meta) {
                         if (JsonResultRow.IsRecommended == true) {
-                            return '<i style="color:green;" class="fa fa-check" aria-hidden="true"></i>';
+                            return '<div style="background-color:green;color: #fff; width: 50px; text-align: center; border-radius: 4px;"> YES </div>';
                         }
-                        return '<i style="color: red;" class="fa fa-times" aria-hidden="true"></i>';
+                        return '<div style="background-color: red;padding: 0px 5px;color: #fff; width: 50px; text-align: center;border-radius: 4px;"  > NO </div>';
                       
                     }
                 },

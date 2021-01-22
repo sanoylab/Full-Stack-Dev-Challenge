@@ -93,9 +93,30 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li>@Html.ActionLink("My Ads", "MyAds", "Classified")</li>
+                                @if (Session["user"] != null)
+                                {
+                                    <li>@Html.ActionLink("Manage Category", "MyAds", "Classified")</li>
+                                    <li>@Html.ActionLink("My Ads", "MyAds", "Classified")</li>
+                                    <li>@Html.ActionLink("Manage Sliding Hero ", "MyAds", "Classified")</li>
+                                    <li>  @Html.ActionLink("Logout ", "Logout", "User")</li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        
+                                            <div style="color: green;" class="alert alert-warning alert-dismissible" role="alert">
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <strong>Info!</strong> Login with default username and password to see more features
+                                            </div>
+                                       
 
-                                <li><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
+                                    </li>
+
+                                    <li>@Html.ActionLink("Login ", "Login", "User")</li>
+
+                                }
+
+
                             </ul>
                         </div>
                     </div>
@@ -121,12 +142,7 @@
                                 <li><a href="/Home/Index" class="active">Home</a></li>
                                 <li><a href="/Classified/Categories">Classified</a></li>
 
-                                <li>
-                                    <div style="color: green;" class="alert-dismissible" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <strong>Info!</strong> Login with default username and password to see more features
-                                    </div>
-                                </li>
+                            
                             </ul>
                         </div>
                     </div>
