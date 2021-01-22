@@ -26,10 +26,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/25/2012 12:48:56</publishTime>
     </File>
     <File Include="bin/Online.Classified.App.dll">
-      <publishTime>01/21/2021 23:49:44</publishTime>
+      <publishTime>01/22/2021 00:30:19</publishTime>
     </File>
     <File Include="bin/Online.Classified.App.pdb">
-      <publishTime>01/21/2021 23:49:44</publishTime>
+      <publishTime>01/22/2021 00:30:19</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 06:38:48</publishTime>
@@ -265,6 +265,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/images/home/searchicon.png">
       <publishTime>01/14/2021 22:16:38</publishTime>
     </File>
+    <File Include="Content/images/mvc.png">
+      <publishTime>01/22/2021 00:30:10</publishTime>
+    </File>
     <File Include="Content/js/bootstrap.min.js">
       <publishTime>01/14/2021 22:15:48</publishTime>
     </File>
@@ -320,7 +323,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/21/2021 21:11:07</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>01/21/2021 16:21:03</publishTime>
+      <publishTime>01/22/2021 01:02:24</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>01/15/2021 21:06:08</publishTime>
@@ -329,7 +332,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/14/2021 21:46:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/21/2021 17:55:21</publishTime>
+      <publishTime>01/22/2021 00:37:37</publishTime>
     </File>
   </ItemGroup>
 </Project>

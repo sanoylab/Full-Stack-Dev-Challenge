@@ -118,6 +118,7 @@
     <Content Include="Content\images\home\new.png" />
     <Content Include="Content\images\home\pricing.png" />
     <Content Include="Content\images\home\searchicon.png" />
+    <Content Include="Content\images\mvc.png" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\contact.js" />
     <Content Include="Content\js\gmaps.js" />
