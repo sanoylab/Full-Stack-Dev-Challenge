@@ -158,6 +158,7 @@
     <Content Include="Views\Classified\Index.cshtml" />
     <Content Include="Views\Classified\Detail.cshtml" />
     <Content Include="Views\Classified\MyAds.cshtml" />
+    <Content Include="Views\Classified\PostAd.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

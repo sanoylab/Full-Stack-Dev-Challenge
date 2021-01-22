@@ -13,6 +13,9 @@ This is a full stack web app development challenge. In this challenge I will try
 - SQL Server
 - MERN Stack (MongoDB, Express, React, Node)
 - PHP
+- Laravel
+- Python
+- Ruby on Rail
 - Drupal CMS
 
 # DEMOS

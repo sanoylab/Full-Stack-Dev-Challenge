@@ -90,23 +90,26 @@
 
                     @foreach (var item in Model)
                     {
+                        if (item.CategoryId == 1)
+                        {
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
+                                            <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
+                                            <p> @Html.DisplayFor(modelItem => item.Title)</p>
+                                            <a href="/Classified/Detail/@Html.DisplayFor(modelItem => item.Id)" class="btn btn-default add-to-cart">View Detail</a>
 
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
-                                        <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
-                                        <p> @Html.DisplayFor(modelItem => item.Title)</p>
-                                        <a href="/Classified/Detail/@Html.DisplayFor(modelItem => item.Id)" class="btn btn-default add-to-cart">VIew Detail</a>
-                                       
+
+                                        </div>
 
                                     </div>
 
                                 </div>
-
                             </div>
-                        </div>
+                        }
+
 
 
 
@@ -126,88 +129,63 @@
 
                     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/recommend1.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                                            </div>
 
+
+                           
+                            @foreach (var item in Model)
+                            { 
+                               
+                                
+                                if (item.IsRecommended == true)
+                                {<div class="item active">
+                                        <div class="col-sm-4">
+                                            <div class="product-image-wrapper">
+                                                <div class="single-products">
+                                                    <div class="productinfo text-center">
+                                                        <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
+                                                        <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
+                                                        <p>Easy Polo Black Edition</p>
+                                                        <a href="/Classified/Detail/@Html.DisplayFor(modelItem => item.Id)" class="btn btn-default add-to-cart">View Detail</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/recommend2.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                                            </div>
+                                }
+                                else
+                                {
+                                    <div class="item">
+                                        <div class="col-sm-4">
+                                            <div class="product-image-wrapper">
+                                                <div class="single-products">
+                                                    <div class="productinfo text-center">
+                                                        <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
+                                                        <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
+                                                        <p>Easy Polo Black Edition</p>
+                                                        <a href="/Classified/Detail/@Html.DisplayFor(modelItem => item.Id)" class="btn btn-default add-to-cart">View Detail</a>
+                                                    </div>
 
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/recommend3.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                                            </div>
+                                }
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/recommend1.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/recommend2.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/recommend3.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart">View Detail</a>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
+
+
+                            }
+
+
+
+
+
                         </div>
                         <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
                             <i class="fa fa-angle-left"></i>

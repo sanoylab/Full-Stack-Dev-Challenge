@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace Online.Classified.App.Controllers
 {
     public class ClassifiedController: Controller
@@ -38,6 +39,7 @@ namespace Online.Classified.App.Controllers
                 return View(classifieds);              
             }
         }
+        //GET API
         public ActionResult MyClassified()
         {
             using(AradaLejDBContext _context = new AradaLejDBContext())
@@ -49,6 +51,55 @@ namespace Online.Classified.App.Controllers
         }
         public ActionResult MyAds()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult PostAd(int Id)
+        {
+            using (AradaLejDBContext _context = new AradaLejDBContext())
+            {
+                var ad = _context.Classified.Where(a => a.Id == Id).FirstOrDefault();
+                return View(ad);
+            }
+               
+        }
+        [HttpPost]
+
+        public ActionResult PostAd(Models.Classified classified)
+        {
+            bool status = false;
+            if (ModelState.IsValid)
+            {
+                using (AradaLejDBContext _context = new AradaLejDBContext())
+                {
+                    if(classified.Id > 0)
+                    {
+                        //edit
+                        var v = _context.Classified.Where(a => a.Id == classified.Id).FirstOrDefault();
+                        if (v != null)
+
+                        {
+                            v.CategoryId = classified.CategoryId;
+                            v.Title = classified.Title;
+                            v.PictureUrl = classified.PictureUrl;
+                            v.Description = classified.Description;
+                            v.Location = classified.Location;
+                            v.Price = classified.Price;
+                            v.PhoneNumber = classified.PhoneNumber;
+                            v.IsRecommended = Convert.ToBoolean(classified.IsRecommended);
+                        }
+
+                    }
+                    else
+                    {
+                        _context.Classified.Add(classified);
+                    }
+                    _context.SaveChanges();
+                    status = true;
+                }
+                return RedirectToAction("MyAds");
+            }
             return View();
         }
     }
