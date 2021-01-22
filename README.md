@@ -27,6 +27,9 @@ This is a full stack web app development challenge. In this challenge I will try
 - Node (Express) Backend Demo: https://kuralio.herokuapp.com/api/v1/docs/
 - MERN (MongoDB/Express/React/Node) Demo: http://gebeyaonline.web.app/
 - PHP Demo:
+- Laravel Demo:
+- Python (Django) Demo:
+- Ruby on Rails Demo:
 - Drupal Demo:
 
 ## Cloud Plateform Used
