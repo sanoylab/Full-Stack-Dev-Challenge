@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,21 +13,12 @@ namespace Online.Classified.App.Controllers
     public class ClassifiedController: Controller
     {
 
-        //Populates all classified categories
-        public ActionResult Categories ()
+        
+        public ActionResult Index()
         {
             using (AradaLejDBContext aradaLejContext = new AradaLejDBContext())
             {
-                var categorires = aradaLejContext.Category.OrderBy(a => a.Id).ToList();
-                return View(categorires);
-                
-            }            
-        }
-        public ActionResult Index(int Id)
-        {
-            using (AradaLejDBContext aradaLejContext = new AradaLejDBContext())
-            {
-                var classifieds = aradaLejContext.Classified.OrderBy(a => a.Id).Where(a=>a.CategoryId == Id).ToList();
+                var classifieds = aradaLejContext.Classified.OrderBy(a => a.Id).Where(a=>a.CategoryId == 1).ToList();
                 return View(classifieds);               
             }
            
@@ -42,7 +34,8 @@ namespace Online.Classified.App.Controllers
         //GET API
         public ActionResult MyClassified()
         {
-            using(AradaLejDBContext _context = new AradaLejDBContext())
+            
+            using (AradaLejDBContext _context = new AradaLejDBContext())
             {
                 List<Online.Classified.App.Models.Classified> classifieds = _context.Classified.ToList();
                 return Json(new { data = classifieds }, JsonRequestBehavior.AllowGet);
@@ -51,24 +44,46 @@ namespace Online.Classified.App.Controllers
         }
         public ActionResult MyAds()
         {
-            return View();
+            if (Session["user"] != null)
+            {
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
+            
         }
 
         [HttpGet]
         public ActionResult PostAd(int Id)
         {
-            using (AradaLejDBContext _context = new AradaLejDBContext())
+            if (Session["user"] == null)
             {
+                return RedirectToAction("Index", "Home");
+            }
+                using (AradaLejDBContext _context = new AradaLejDBContext())
+            {
+                var category = _context.Category.Where(a=>a.Status==true).ToList();
+                ViewBag.CategoryId = category;
+
                 var ad = _context.Classified.Where(a => a.Id == Id).FirstOrDefault();
                 return View(ad);
             }
                
         }
         [HttpPost]
-
+        [ValidateInput(false)]
         public ActionResult PostAd(Models.Classified classified)
         {
-            bool status = false;
+            StringBuilder sbDescription = new StringBuilder();
+            sbDescription.Append(HttpUtility.HtmlEncode(classified.Description));
+            sbDescription.Replace("&lt;b&gt;", "<b>");
+            sbDescription.Replace("&lt;/b&gt;", "</b>");
+            sbDescription.Replace("&lt;u&gt;", "<u>");
+            sbDescription.Replace("&lt;/u&gt;", "</u>");
+            classified.Description = sbDescription.ToString();
+
+            string title = HttpUtility.HtmlEncode(classified.Title);
+            classified.Title = title;
+
             if (ModelState.IsValid)
             {
                 using (AradaLejDBContext _context = new AradaLejDBContext())
@@ -96,7 +111,7 @@ namespace Online.Classified.App.Controllers
                         _context.Classified.Add(classified);
                     }
                     _context.SaveChanges();
-                    status = true;
+                   
                 }
                 return RedirectToAction("MyAds");
             }

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Online.Classified.App.Models.Category>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-sm-3">
+                    <div class="product-image-wrapper" style="border: 1px solid #F0F0E9;">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src=" @Html.DisplayFor(modelItem => item.CategoryImage)" alt="" />
+                                <a href="/Classified/Index/@Html.DisplayFor(modelItem => item.Id)?name=@Html.DisplayFor(modelItem => item.Name)">
+                                    <h2> @Html.DisplayFor(modelItem => item.Name)</h2>
+
+                                   
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+    
+
+ 
+
+

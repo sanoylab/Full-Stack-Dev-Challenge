@@ -95,9 +95,9 @@
                             <ul class="nav navbar-nav">
                                 @if (Session["user"] != null)
                                 {
-                                    <li>@Html.ActionLink("Manage Category", "MyAds", "Classified")</li>
+                                    <li>@Html.ActionLink("Manage Category", "ManageCategory", "Category")</li>
                                     <li>@Html.ActionLink("My Ads", "MyAds", "Classified")</li>
-                                    <li>@Html.ActionLink("Manage Sliding Hero ", "MyAds", "Classified")</li>
+                                
                                     <li>  @Html.ActionLink("Logout ", "Logout", "User")</li>
                                 }
                                 else
@@ -140,7 +140,7 @@
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
                                 <li><a href="/Home/Index" class="active">Home</a></li>
-                                <li><a href="/Classified/Categories">Classified</a></li>
+                                <li><a href="/Category/Index">Classified</a></li>
 
                             
                             </ul>

@@ -1,29 +1,29 @@
 ﻿
 @{
-    ViewBag.Title = "MyClassified";
+    ViewBag.Title = "ManageCategory";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <section>
     <div class="container">
         <div class="row">
-            <h2 class="title text-center">My Ads</h2>
+            <h2 class="title text-center">Manage Category</h2>
         </div>
         <div class="row">
-            @Html.ActionLink("Post New Ad", "PostAd", "Classified", new { Id = "0" }, new { @class = "btn btn-success", @style = "margin-bottom: 20px;" })
-          
-          
+            @Html.ActionLink("Create New", "Create", "Category", new { Id = "0" }, new { @class = "btn btn-success", @style = "margin-bottom: 20px;" })
+
+
         </div>
         <div class="row">
-            <table id="myAds" class="table table-striped table-hover" cellspacing="0" width="100%">
+
+            <table id="myCategory" class="table table-striped table-hover" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Title</th>
-                        <th>Location</th>
-                        <th>Price</th>
-                        <th>Recommended</th>
-                        <th>Telelphone</th>
+                        <th>Name</th>
+
+                        <th>Status</th>
+
 
 
 
@@ -34,11 +34,11 @@
                 <tfoot>
                     <tr>
                         <th></th>
-                        <th>Title</th>
-                        <th>Location</th>
-                        <th>Price</th><th>Recommended</th>
-                        <th>Telelphone</th>
-                        
+                        <th>Name</th>
+
+                        <th>Status</th>
+
+
                         <th>Edit</th>
                         <th>Delete</th>
 
@@ -50,9 +50,9 @@
 </section>
 <script>
     $(document).ready(function () {
-        let data = getMyClassified();
-        $('#myAds').DataTable({
-            ajax: { url: '/Classified/MyClassified', dataSrc: 'data' },
+        let data = getCategory();
+        $('#myCategory').DataTable({
+            ajax: { url: '/Category/GetCategories', dataSrc: 'data' },
             //data: data,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
@@ -60,31 +60,30 @@
             columns: [
                 {
                     render: function (data, type, JsonResultRow, meta) {
-                        return '<img style="width: 70px;" src="' + JsonResultRow.PictureUrl+'" />';
+                        return '<img style="border-radius: 50%; width: 70px; height: 70px;" src="' + JsonResultRow.CategoryImage + '" />';
                     }
                 },
-                { data: 'Title' },
-                { data: 'Location' },
-                { data: 'Price' },
-              
+                { data: 'Name' },
+               
+
                 {
                     render: function (data, type, JsonResultRow, meta) {
-                        if (JsonResultRow.IsRecommended == true) {
+                        if (JsonResultRow.Status == true) {
                             return '<div style="background-color:green;color: #fff; width: 50px; text-align: center; border-radius: 4px;"> YES </div>';
                         }
                         return '<div style="background-color: red;padding: 0px 5px;color: #fff; width: 50px; text-align: center;border-radius: 4px;"  > NO </div>';
-                      
+
                     }
                 },
-                { data: 'PhoneNumber' },
+                
                 {
                     "data": "Id", "width": "50px", "render": function (data) {
-                        return '<a href="/Classified/PostAd/' + data + '"><i class="fa fa-pencil" aria-hidden="true"></i></a>'
+                        return '<a href="/Category/Create/' + data + '"><i class="fa fa-pencil" aria-hidden="true"></i></a>'
                     }
                 },
                 {
                     "data": "Id", "width": "50px", "render": function (data) {
-                        return '<a style="color:red;" class="popup" href="/Classified/DeletePost/' + data + '"><i class="fa fa-trash" aria-hidden="true"></i></a>'
+                        return '<a style="color:red;" class="popup" href="/Category/Delete/' + data + '"><i class="fa fa-trash" aria-hidden="true"></i></a>'
                     }
                 }
             ]
@@ -93,17 +92,10 @@
 </script>
 
 <script>
-    const getMyClassified = async () => {
-        const dom = document.getElementById("myAds");
-        const response = await fetch('/Classified/MyClassified');
-        let row = '';
+    const getCategory = async () => {
+        const response = await fetch('/Category/GetCategories');
         const data = await response.json();
-        
-        return data.data
-
-
+        return data;
     }
-    getMyClassified();
-
 </script>
 

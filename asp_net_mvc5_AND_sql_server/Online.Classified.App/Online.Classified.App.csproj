@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ClassifiedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -156,13 +157,15 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ClassifiedList.cshtml" />
-    <Content Include="Views\Classified\Categories.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Classified\Index.cshtml" />
     <Content Include="Views\Classified\Detail.cshtml" />
     <Content Include="Views\Classified\MyAds.cshtml" />
     <Content Include="Views\Classified\PostAd.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Category\ManageCategory.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
