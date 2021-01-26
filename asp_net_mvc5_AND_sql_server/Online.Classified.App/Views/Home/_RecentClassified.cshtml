@@ -1,0 +1,18 @@
+﻿@model Online.Classified.App.Models.Classified
+
+<div class="col-sm-3">
+    <div class="product-image-wrapper">
+        <div class="single-products">
+            <div class="productinfo text-center">
+                <img src=" @Html.DisplayFor(model => model.PictureUrl)" alt="" />
+                <h2>@Html.DisplayFor(model => model.Price)</h2>
+                <p> @Html.DisplayFor(model => model.Title)</p>
+                @Html.ActionLink("View Detail", "Detail","Classified", new { @id = Model.Id }, new { @class = "btn btn-default add-to-cart" })
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

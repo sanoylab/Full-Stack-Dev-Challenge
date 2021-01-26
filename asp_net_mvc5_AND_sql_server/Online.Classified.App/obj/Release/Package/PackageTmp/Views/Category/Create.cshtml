@@ -3,6 +3,10 @@
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    if (Session["user"] == null)
+    {
+        Response.Redirect("~/Home/Index", false);
+    }
 }
 
 <section>

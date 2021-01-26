@@ -14,14 +14,13 @@ namespace Online.Classified.App.Controllers
         {
             using (AradaLejDBContext aradaLejContext = new AradaLejDBContext())
             {
-                var classifieds = aradaLejContext.Classified.OrderBy(a => a.Id).Where(a=>a.CategoryId ==1 || a.IsRecommended ==true).ToList();
-
-               
+                var classifieds = aradaLejContext.Classified.OrderBy(a => a.Id).ToList();               
 
                 return View(classifieds);
                 //return Json(new { data = classifieds }, JsonRequestBehavior.AllowGet);
             }
         }
+       
         public ActionResult ClassifiedList()
         {
             using (AradaLejDBContext aradaLejContext = new AradaLejDBContext())

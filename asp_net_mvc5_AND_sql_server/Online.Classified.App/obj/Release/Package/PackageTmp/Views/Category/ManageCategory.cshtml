@@ -1,7 +1,12 @@
-﻿
+﻿@model Online.Classified.App.Models.Category
+
 @{
     ViewBag.Title = "ManageCategory";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    if (Session["user"] == null)
+    {
+        Response.Redirect("~/Home/Index", false);
+    }
 }
 
 <section>
@@ -10,7 +15,8 @@
             <h2 class="title text-center">Manage Category</h2>
         </div>
         <div class="row">
-            @Html.ActionLink("Create New", "Create", "Category", new { Id = "0" }, new { @class = "btn btn-success", @style = "margin-bottom: 20px;" })
+            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#categoryModal">Create New</a>
+           
 
 
         </div>
@@ -21,12 +27,7 @@
                     <tr>
                         <th></th>
                         <th>Name</th>
-
                         <th>Status</th>
-
-
-
-
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -35,19 +36,62 @@
                     <tr>
                         <th></th>
                         <th>Name</th>
-
                         <th>Status</th>
-
-
                         <th>Edit</th>
                         <th>Delete</th>
-
                     </tr>
                 </tfoot>
             </table>
         </div>
     </div>
 </section>
+<!-- Modal -->
+<div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Category</h4>
+            </div>
+            <div class="modal-body">
+                
+                <form id="categoryForm">
+                    <label>Category Image</label>
+                    @Html.TextBoxFor(m=>m.CategoryImage, new {@class="form-control"})
+                    <label>Name</label>
+                    @Html.TextBoxFor(m=>m.Name, new { @class="form-control"})
+                    <label>Status</label>
+                    @Html.CheckBoxFor(m=>m.Status)
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="btnSave" class="btn btn-success">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="categoryDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Confirm</h4>
+            </div>
+            <div class="modal-body">
+                <h3>Are you sure you want to delete category?</h3>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" id="btnDelete" class="btn btn-danger">Delete</button>
+                <button type="button" id="btnCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="categoryId" />
+
 <script>
     $(document).ready(function () {
         let data = getCategory();
@@ -64,7 +108,7 @@
                     }
                 },
                 { data: 'Name' },
-               
+
 
                 {
                     render: function (data, type, JsonResultRow, meta) {
@@ -75,15 +119,16 @@
 
                     }
                 },
-                
+
                 {
                     "data": "Id", "width": "50px", "render": function (data) {
-                        return '<a href="/Category/Create/' + data + '"><i class="fa fa-pencil" aria-hidden="true"></i></a>'
+                       
+                        return '<a href="/Category/Create/'+data+'" ><i class="fa fa-pencil"  aria-hidden="true"></i></a>'
                     }
                 },
                 {
-                    "data": "Id", "width": "50px", "render": function (data) {
-                        return '<a style="color:red;" class="popup" href="/Category/Delete/' + data + '"><i class="fa fa-trash" aria-hidden="true"></i></a>'
+                    "data": "Id", "width": "50px", "render": function (data) {                       
+                        return '<a style="color:red;" class="popup" href="#" onclick="ConfirmDelete(' + data +')"><i class="fa fa-trash" aria-hidden="true"></i></a>'
                     }
                 }
             ]
@@ -96,6 +141,52 @@
         const response = await fetch('/Category/GetCategories');
         const data = await response.json();
         return data;
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#btnSave").click(function () {
+            var categoryFromData = $("#categoryForm").serialize();
+            $.ajax({
+                type: "POST",
+                url: "/Category/Create",
+                data: categoryFromData,
+                success: function (result) {
+                    if (result) {
+                        $("#categoryDeleteModal").modal('hide');
+                        $("#categoryId").val(null);
+                        window.location.href = "/Category/ManageCategory";
+                    } else {
+                        alert("Something went wrong! Try again.")
+                    }
+
+                }
+            })
+        })
+        $("btnCancel").click(function () {
+            window.location.href = "/Category/ManageCategory";
+        })
+       
+        $("#btnDelete").click(function () {
+            var categoryId = $("#categoryId").val();
+            console.log('yonas', categoryId)
+            $.ajax({
+                type: "POST",
+                url: "/Category/Delete",
+                data: { id: categoryId },
+                success: function () {
+                    window.location.href = "/Category/ManageCategory";
+                }
+            })
+        })
+    })
+
+    var ConfirmDelete = function (data) {
+        console.log(data);
+        $("#categoryId").val(data);
+        $("#categoryDeleteModal").modal('show');        
+       
     }
 </script>
 

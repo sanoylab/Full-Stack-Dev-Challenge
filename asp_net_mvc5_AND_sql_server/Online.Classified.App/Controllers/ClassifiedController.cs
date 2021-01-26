@@ -14,11 +14,11 @@ namespace Online.Classified.App.Controllers
     {
 
         
-        public ActionResult Index()
+        public ActionResult Index(int Id)
         {
             using (AradaLejDBContext aradaLejContext = new AradaLejDBContext())
             {
-                var classifieds = aradaLejContext.Classified.OrderBy(a => a.Id).Where(a=>a.CategoryId == 1).ToList();
+                var classifieds = aradaLejContext.Classified.OrderBy(a => a.Id).Where(a=>a.CategoryId == Id).ToList();
                 return View(classifieds);               
             }
            

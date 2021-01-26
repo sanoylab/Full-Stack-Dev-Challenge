@@ -25,7 +25,7 @@
                                 <p>
                                     See more relevant listings, find what you’re looking for quicker, and more! Buy and sell new or used items whenever you go!
                                 </p>
-                                <button type="button" class="btn btn-default get">Sign Up</button>
+                                <a href="/User/Login" class="btn btn-default get">Sign Up</a>
                             </div>
                             <div class="col-sm-6">
                                 <img src="/Content/images/home/girl1.jpg" class="girl img-responsive" alt="" />
@@ -41,7 +41,7 @@
                                 <p>
                                     See more relevant listings, find what you’re looking for quicker, and more! Buy and sell new or used items whenever you go!
                                 </p>
-                                <button type="button" class="btn btn-default get">Sign Up</button>
+                                <a href="/User/Login" class="btn btn-default get">Sign Up</a>
                             </div>
                             <div class="col-sm-6">
                                 <img src="/Content/images/home/girl2.jpg" class="girl img-responsive" alt="" />
@@ -56,7 +56,7 @@
                                 <p>
                                     See more relevant listings, find what you’re looking for quicker, and more! Buy and sell new or used items whenever you go!
                                 </p>
-                                <button type="button" class="btn btn-default get">Sign Up</button>
+                                <a href="/User/Login" class="btn btn-default get">Sign Up</a>
                             </div>
                             <div class="col-sm-6">
                                 <img src="/Content/images/home/girl3.jpg" class="girl img-responsive" alt="" />
@@ -86,43 +86,14 @@
                     <!--features_items-->
                     <h2 class="title text-center">Recent Houses</h2>
 
-
-
-                    @foreach (var item in Model)
+                    @foreach (var item in Model.Take(4))
                     {
                         if (item.CategoryId == 1)
                         {
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src=" @Html.DisplayFor(modelItem => item.PictureUrl)" alt="" />
-                                            <h2>@Html.DisplayFor(modelItem => item.Price)</h2>
-                                            <p> @Html.DisplayFor(modelItem => item.Title)</p>
-                                            <a href="/Classified/Detail/@Html.DisplayFor(modelItem => item.Id)" class="btn btn-default add-to-cart">View Detail</a>
-
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
+                            @Html.Partial("_RecentClassified", item);
                         }
-
-
-
-
-
                     }
-
-
-
-
-
                 </div><!--features_items-->
-
-
                 <div class="recommended_items">
                     <!--recommended_items-->
                     <h2 class="title text-center">recommended items</h2>
@@ -131,11 +102,11 @@
                         <div class="carousel-inner">
 
 
-                           
+
                             @foreach (var item in Model)
-                            { 
-                               
-                                
+                            {
+
+
                                 if (item.IsRecommended == true)
                                 {<div class="item active">
                                         <div class="col-sm-4">
@@ -195,6 +166,33 @@
                         </a>
                     </div>
                 </div><!--/recommended_items-->
+
+
+                <div class="features_items">
+                    <!--features_items-->
+                    <h2 class="title text-center">Recent Computers</h2>
+
+                    @foreach (var item in Model.Skip(4).Take(4))
+                    {
+                        if (item.CategoryId == 2)
+                        {
+                            @Html.Partial("_RecentClassified", item);
+                        }
+                    }
+                </div><!--features_items-->
+                <div class="features_items">
+                    <!--features_items-->
+                    <h2 class="title text-center">Recent Furnitures</h2>
+
+                    @foreach (var item in Model.Skip(8).Take(5))
+                    {
+                        if (item.CategoryId == 3)
+                        {
+                            @Html.Partial("_RecentClassified", item);
+                        }
+                    }
+                </div><!--features_items-->
+
 
             </div>
         </div>

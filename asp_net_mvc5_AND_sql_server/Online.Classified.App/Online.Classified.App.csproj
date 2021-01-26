@@ -166,6 +166,7 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\Category\ManageCategory.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Home\_RecentClassified.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
