@@ -7,20 +7,48 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
 namespace Online.Classified.App
 {
+
+
     public partial class SiteMaster
     {
 
         /// <summary>
-        /// HeadContent control.
+        /// panInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.Panel panInfo;
+
+        /// <summary>
+        /// lblManageCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblManageCategory;
+
+        /// <summary>
+        /// lblMyAds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMyAds;
+
+        /// <summary>
+        /// lblLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lblLogin;
 
         /// <summary>
         /// MainContent control.

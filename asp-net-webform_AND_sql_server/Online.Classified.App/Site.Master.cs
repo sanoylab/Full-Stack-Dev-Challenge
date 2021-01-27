@@ -11,7 +11,28 @@ namespace Online.Classified.App
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] != null)
+            {
+                lblManageCategory.Visible = lblMyAds.Visible = true;
+                lblLogin.Text = "Logout";
+                panInfo.Visible = false;
+            }
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if(lblLogin.Text == "Login")
+            {
+                Response.Redirect("Login.aspx");
+                
+            }
+            else
+            {
+                Session["user"] = null;
+                Response.Redirect("Default.aspx");
+            }
+
+            
         }
     }
 }
