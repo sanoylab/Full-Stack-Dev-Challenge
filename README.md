@@ -8,8 +8,10 @@ This is a full stack web app development challenge. In this challenge I will try
 
 - ASP.net Web Form
 - ASP.net MVC 5
-- ASP.net Core
 - ASP.net Web API
+- ASP.net Core 5 MVC
+- ASP.net Core 5 Razor Page
+- ASP.net Core 5 Web API
 - SQL Server
 - MERN Stack (MongoDB, Express, React, Node)
 - PHP
@@ -20,10 +22,13 @@ This is a full stack web app development challenge. In this challenge I will try
 
 # DEMOS
 
+- ASP.net Core 5 MVC Demo: http://aspnetcore.aradalej.com/
+- ASP.net Core Web API Demo:
+- ASP.net Core Razor Page Demo:
 - ASP.net MVC 5 Demo: http://aspnetmvc5.aradalej.com
-- ASP.net Web Form Demo: http://aspnetwebform.aradalej.com/
-- ASP.net Core Demo: http://aspnetcore.aradalej.com/
 - ASP.net Web API Demo:
+- ASP.net Web Form Demo: http://aspnetwebform.aradalej.com/
+
 - Node (Express) Backend Demo: https://kuralio.herokuapp.com/api/v1/docs/
 - MERN (MongoDB/Express/React/Node) Demo: http://gebeyaonline.web.app/
 - PHP Demo:
