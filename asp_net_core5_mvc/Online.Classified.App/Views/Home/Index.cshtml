@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Online.Classified.App.Models.Classified>
+
+
+<div class="container">
+    <div class="col-12"> <h2 class="display-4 text-center">Recent Houses</h2></div>
+    <div class="row">
+
+        @foreach (var item in Model.Take(4))
+        {
+            if (item.CategoryId == 1)
+            {
+                <partial name="_RecentClassified" model="item" />
+
+            }
+        }
+
+    </div>
+    <div class="col-12"> <h2 class="display-4 text-center">Recent Computer</h2></div>
+    <div class="row">
+
+        @foreach (var item in Model.Skip(4).Take(4))
+        {
+            if (item.CategoryId == 2)
+            {
+                <partial name="_RecentClassified" model="item" />
+
+            }
+        }
+
+    </div>
+    <div class="col-12"> <h2 class="display-4 text-center">Recent Furniture</h2></div>
+    <div class="row">
+
+        @foreach (var item in Model.Skip(8).Take(5))
+        {
+            if (item.CategoryId == 3)
+            {
+                <partial name="_RecentClassified" model="item" />
+
+            }
+        }
+
+    </div>
+</div>

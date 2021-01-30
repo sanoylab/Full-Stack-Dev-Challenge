@@ -1,0 +1,13 @@
+﻿<div class="container row p-0 m-0">
+    <div class="col-12">
+        <h2 class="display-4 text-center">Manage Categories</h2>
+    </div>
+    <div id="view-all" class="col-12">
+        @await Html.PartialAsync("_ViewAll")
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/category.js"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

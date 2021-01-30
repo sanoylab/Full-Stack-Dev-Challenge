@@ -1,0 +1,11 @@
+﻿@model Online.Classified.App.Models.Classified
+<div class="col-3">
+
+    <div class="card border-0 m-2 p-3" style="width: 18rem;">
+        <img class="card-img-top" src="@Model.PictureUrl" alt="Card image cap">
+        <div class="card-body">
+            <p class="text-center text-danger"><strong><label>@Model.Price</label></strong></p>
+            <p class="card-text text-center" <label asp-for="@Model.Title">@Model.Title</label></p>
+        </div>
+    </div>
+</div>

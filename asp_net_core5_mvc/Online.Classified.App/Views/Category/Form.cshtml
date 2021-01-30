@@ -1,0 +1,60 @@
+﻿@model Online.Classified.App.Models.Category
+
+@{ Layout = null; }
+
+
+
+<div class="col-12">
+    <form asp-action="Form" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this);">
+
+
+        @if (Model.Id != 0)
+        {
+            <input type="hidden" asp-for="Id" />
+        }
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <div class="input-group">
+               
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryImage" class="control-label"></label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-images"></i></div>
+                </div>
+                <input asp-for="CategoryImage" class="form-control" />
+            </div>
+            <span asp-validation-for="CategoryImage" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <div class="input-group">
+                <input type="checkbox" asp-for="Status" />
+                
+             
+            </div>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-12">
+                <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+
+
+            </div>
+
+        </div>
+
+
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" /> }
