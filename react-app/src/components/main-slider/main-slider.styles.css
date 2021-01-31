@@ -1,0 +1,20 @@
+/* intro-area css start */
+.intro-area {
+    height: 250px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #373373;
+  }
+  .intro-area h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+  .intro-area p {
+    font-size: 18px;
+  }
+  /* intro-area css end */

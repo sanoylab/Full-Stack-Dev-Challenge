@@ -1,0 +1,28 @@
+footer{
+     padding-bottom:2em;background-color:#1e2e3a;
+}
+footer .container{
+    padding-top: 2rem;
+}
+.white{
+    color: #fff;
+}
+hr{
+    border-color: #37475A;
+}
+.center{
+    text-align: center;
+}
+.bot {
+    background-color: #37475A;
+    margin-top: 2em;
+    text-align: center;
+    height: 45px;
+  }
+  
+ .footer-row{
+   display: flex;
+   justify-content: space-between;
+ }
+  
+

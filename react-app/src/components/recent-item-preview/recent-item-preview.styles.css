@@ -1,0 +1,69 @@
+.wrapper {
+    width: 100%;
+
+    margin: 20px auto;
+}
+
+ .mobile{
+    display: none;
+}
+.recent-item-list{
+   
+    overflow-y: hidden;
+}
+.wrapper-top {
+    display: flex;
+}
+.container{
+    padding: 10px;
+}
+.browse-all {
+
+    color: #373373;
+    padding: .5em 1.2em;
+    border: solid 1px #373373;
+    border-radius: 20px;
+}
+h1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    float: left;
+    margin: 0;
+    
+}
+.header{
+    width: 90%;
+}
+.browse-all:hover {
+    background: #373373;
+    color: #f7f7f7;
+    transition: all ease-in-out .3s;
+}
+
+.sliderComplete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 992px) {
+    .recent-item {
+        display: flex;
+       
+      
+    }
+
+    .header {
+        width: 70%;
+        padding-left: 12px;
+    }
+.desktop{
+    display: none;
+}
+.mobile{
+   
+    transition: all .5s;
+}
+}

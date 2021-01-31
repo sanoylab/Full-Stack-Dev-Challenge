@@ -1,0 +1,34 @@
+
+
+
+ .container-fluid, .container-small{
+    height: 260px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+   
+    justify-content: center;   
+    
+}
+
+.container-fluid  h2, .container-small h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 50px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.container-fluid{
+    width: 100%;
+}
+.container-small{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    margin-top: 15px;
+}

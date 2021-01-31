@@ -1,0 +1,131 @@
+.header-area {
+   
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
+   
+    background-color: #ffffff;
+}
+
+.top-header {
+    background: #fff;
+   
+    border-top: 5px solid #373373;    
+   
+    height: 80px;
+  }
+.top-header .container {
+    display: flex;
+    min-height: 55px;
+   
+    justify-content: space-between;
+    align-items: center;
+    padding:0px;
+}
+
+.top-header .container .search {
+    display: flex;
+}
+
+
+
+.top-header .container ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    
+}
+
+.top-header .container ul a {
+    color: #fff;
+    text-decoration: none;
+}
+.site-logo{
+    display:flex;
+   
+    align-items: center;
+}
+.site-logo div{
+    padding-left: 10px;
+}
+
+a.site-logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  /*  font-family: 'Rock Salt', cursive;   */
+    color: #373373;
+    text-decoration: none;
+  }
+  
+  .site-logo .small{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Rock Salt', cursive;
+    padding-left: 10px;
+    color: #000;
+}
+
+.post{
+    width: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.postad {
+    background-color: #373373;
+    color: #fff;
+    padding: 13px;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    
+    box-shadow: 0 2px 10px 0 rgba(55,51,115,.3);
+    box-sizing: border-box;
+    font-weight: 700;
+  }
+.mobile{
+    display:none !important;
+}
+@media screen and (max-width: 992px) {
+    .top-header{
+        height: 170px;
+    }
+    .header-area{
+        height: 269px
+    }
+    a.site-logo{
+          flex:2;
+    }
+    .post{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .mobile{
+        display: flex !important;
+    }
+    .desktop{
+        display: none !important;
+    }
+    .top-header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .top-header .container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+       align-items: flex-start;
+        justify-content: space-between;
+        align-items: left;
+    }
+    .top-header .container .top {
+        
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+}
