@@ -1,0 +1,12 @@
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Service.deps.json
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Service.dll
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Service.pdb
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.csprojAssemblyReference.cache
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.AssemblyInfoInputs.cache
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.AssemblyInfo.cs
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.csproj.CoreCompileInputs.cache
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.dll
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.pdb
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Data.dll
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\bin\Debug\netcoreapp3.1\Blog.Data.pdb
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\Blog.Service\obj\Debug\netcoreapp3.1\Blog.Service.csproj.CopyComplete

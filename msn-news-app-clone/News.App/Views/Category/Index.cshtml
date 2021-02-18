@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    @model IEnumerable<News.Data.Models.Category>
+}
+
+<div class="container py-5">
+
+    <div class="row" data-masonry='{"percentPosition": true }'>
+        @{ int counter = 0; }
+        @foreach (var item in Model)
+        {
+            /*
+            if (counter != 0 && counter % 3 == 0)
+            {
+                @:</div>
+                @:<div class="row" data-masonry='{"percentPosition": true }'>
+            }
+            */
+
+            <div class="col-sm-4 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top thumbnail" src="@Html.DisplayFor(modelItem => item.Thumbnail)" alt="@Html.DisplayFor(modelItem => item.Name)">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            <a href="/Home/Posts/@Html.DisplayFor(modelItem => item.Id)?name=@Html.DisplayFor(modelItem => item.Name)" class="card-text text-center">
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            //counter++;
+
+        }
+    </div>
+</div>
