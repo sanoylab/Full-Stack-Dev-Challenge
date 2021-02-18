@@ -1,0 +1,105 @@
+﻿@model Online.Classified.Data.Models.Classified
+
+
+@{ Layout = null; }
+
+
+
+<div class="col-12">
+    <form asp-action="Form" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPostClassified(this);">
+
+
+        @if (Model.Id != 0)
+        {
+            <input type="hidden" asp-for="Id" />
+        }
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label asp-for="Category.Id" class="control-label">Category</label>
+            <div class="input-group">
+                <select asp-for="Category.Id" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfCategory,"Id", "Name"))"></select>
+                <input type="hidden" asp-for="Category.Name" />
+                <input type="hidden" asp-for="Category.CategoryImage" />
+
+            </div>
+            <span asp-validation-for="Category.Id" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Title" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Description" class="form-control" />
+            </div>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PictureUrl" class="control-label"></label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                    <div class="input-group-text"><i class="fas fa-images"></i></div>
+
+
+                </div>
+                <input asp-for="PictureUrl" class="form-control" />
+                <img src="@Model.PictureUrl" width="42" />
+            </div>
+            <span asp-validation-for="PictureUrl" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Location" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Location" class="form-control" />
+            </div>
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Price" class="form-control" />
+            </div>
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="PhoneNumber" class="form-control" />
+            </div>
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="IsRecommended" class="control-label"></label>
+            <div class="input-group">
+                <input type="checkbox" asp-for="IsRecommended" />
+
+
+            </div>
+            <span asp-validation-for="IsRecommended" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-12">
+                <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+
+
+            </div>
+
+        </div>
+
+
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" /> }

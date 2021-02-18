@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Online.Classified.App.Models;
+using Online.Classified.Data;
+using Online.Classified.Services;
+using Online.Classified.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,8 @@ namespace Online.Classified.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IClassifiedService, ClassifiedService>();
             services.AddDbContext<AradaLejDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AradaLejDbConnection")));
         }
 

@@ -6,12 +6,16 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
-
+.display-4{
+    font-size: 2.5rem;
+}
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
-
+a:hover{
+    cursor:pointer;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;

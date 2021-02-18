@@ -1,7 +1,8 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Online.Classified.App.Models;
+using Online.Classified.Data;
+using Online.Classified.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +12,19 @@ namespace Online.Classified.App.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly AradaLejDbContext _context;
+       
+        private readonly ICategoryService _categoryService;
         [BindProperty]
         public Category Category { get; set; }
 
-        public CategoryController(AradaLejDbContext context)
+        public CategoryController(ICategoryService categoryService)
         {
-            _context = context;
+            _categoryService = categoryService;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var CategoryList = await _context.Category.ToListAsync();
-            return View(CategoryList);
+            var CategoryList =  _categoryService.GetAll();
+            return View(CategoryList.ToList());
         }
         public IActionResult ManageCategory()
         {
@@ -38,7 +40,7 @@ namespace Online.Classified.App.Controllers
                 return View(Category);
             }
             //Update
-            Category = _context.Category.FirstOrDefault(b => b.Id == id);
+            Category = _categoryService.GetById(id);
             if (Category == null)
             {
                 return NotFound();
@@ -55,16 +57,16 @@ namespace Online.Classified.App.Controllers
                 if (Category.Id == 0)
                 {
                     //CREATE
-                    _context.Category.Add(Category);
+                    _categoryService.Add(Category, "add");                 
 
                 }
                 else
                 {
-                    _context.Category.Update(Category);
+                    _categoryService.Add(Category, "update");
                 }
-                _context.SaveChanges();
+               
 
-                return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_ViewAll", _context.Category.ToList()) });
+                return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_ViewAll", _categoryService.GetAll()) });
 
             }
 
@@ -77,19 +79,18 @@ namespace Online.Classified.App.Controllers
 
         #region API CALLS
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public IActionResult GetAll()
         {
-            return Json(new { data = await _context.Category.ToListAsync() });
+            return Json(new { data = _categoryService.GetAll() });
         }
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
-            var book = await _context.Category.FirstOrDefaultAsync(b => b.Id == id);
-            if (book == null)
+            var isDeleted = _categoryService.Delete(id);
+            if (isDeleted == false)
             {
                 return Json(new { success = false, message = "Error while deleting" });
             }
-            _context.Category.Remove(book);
-            await _context.SaveChangesAsync();
+           
             return Json(new { success = true, message = "Delete successful" });
         }
         #endregion

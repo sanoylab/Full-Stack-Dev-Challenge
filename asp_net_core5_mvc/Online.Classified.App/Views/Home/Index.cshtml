@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Online.Classified.App.Models.Classified>
+﻿@model IEnumerable<Online.Classified.Data.Models.Classified>
 
 
 <div class="container">
@@ -7,7 +7,7 @@
 
         @foreach (var item in Model.Take(4))
         {
-            if (item.CategoryId == 1)
+            if (item.Category.Id == 1)
             {
                 <partial name="_RecentClassified" model="item" />
 
@@ -20,7 +20,7 @@
 
         @foreach (var item in Model.Skip(4).Take(4))
         {
-            if (item.CategoryId == 2)
+            if (item.Category.Id == 2)
             {
                 <partial name="_RecentClassified" model="item" />
 
@@ -33,7 +33,7 @@
 
         @foreach (var item in Model.Skip(8).Take(5))
         {
-            if (item.CategoryId == 3)
+            if (item.Category.Id == 3)
             {
                 <partial name="_RecentClassified" model="item" />
 

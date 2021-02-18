@@ -1,4 +1,4 @@
-﻿@model Online.Classified.App.Models.Category
+﻿@model Online.Classified.Data.Models.Category
 
 @{ Layout = null; }
 
@@ -25,9 +25,13 @@
             <label asp-for="CategoryImage" class="control-label"></label>
             <div class="input-group">
                 <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-images"></i></div>
+                   
+                        <div class="input-group-text"><i class="fas fa-images"></i></div>
+                   
+
                 </div>
                 <input asp-for="CategoryImage" class="form-control" />
+                <img src="@Model.CategoryImage" width="42" />
             </div>
             <span asp-validation-for="CategoryImage" class="text-danger"></span>
         </div>
