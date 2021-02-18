@@ -22,6 +22,7 @@ This is a full stack web app development challenge. In this challenge I will try
 
 # DEMOS
 
+- ASP.net Core News App Demo: https://news-app-dotnet-core.herokuapp.com/
 - ASP.net Core Web API Demo:
 - ASP.net Core Razor Page Demo:
 - ASP.net MVC 5 Demo: http://aspnetmvc5.aradalej.com
