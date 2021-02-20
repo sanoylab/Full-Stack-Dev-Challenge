@@ -1,4 +1,5 @@
-﻿using News.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using News.Data;
 using News.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace News.Service
 
         public IEnumerable<Post> GetAll()
         {
-            return _context.Posts;
+            return _context.Posts.Include(a=>a.Category);
         }
 
         public IEnumerable<Post> GetByCategory(int categoryId)
@@ -48,9 +49,9 @@ namespace News.Service
             return _context.Posts.Where(post => post.Category.Id == categoryId);
         }
 
-        public Post GetById(int id)
+        public Post GetById(int ? id)
         {
-            return _context.Posts.FirstOrDefault(post => post.Id == id);
+            return _context.Posts.Include(a=>a.Category).FirstOrDefault(post => post.Id == id);
         }
     }
 }

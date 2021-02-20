@@ -1,0 +1,26 @@
+﻿
+
+
+
+@{
+    ViewData["Title"] = "Manage News Category";
+}
+<div class="container">
+
+    <div class="row">
+        <div id="view-all-news" class="container">
+            <div class="row py-5"><h1>Manage News</h1></div>
+            <div class="row">
+                @await Html.PartialAsync("_ViewAll")
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+    <script src="~/js/news.js"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

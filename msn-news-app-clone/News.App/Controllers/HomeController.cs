@@ -7,14 +7,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using News.Data.Models;
 
 namespace News.App.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ICategoryService _categoryService;
-        private readonly IPostService _postService; 
-
+        private readonly IPostService _postService;
+        [BindProperty]
+        public Post Post { get; set; }
         public HomeController(ICategoryService categoryService, IPostService postService)
         {
             _categoryService = categoryService;
@@ -25,6 +27,10 @@ namespace News.App.Controllers
         {
             var posts = _postService.GetAll().OrderByDescending(post=>post.Id);
             return View(posts);
+        }
+        public IActionResult Manage()
+        {
+            return View();
         }
         public IActionResult Posts(int id)
         {
@@ -44,5 +50,76 @@ namespace News.App.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Form(int? id)
+        {
+            Post = new Post();
+            var categories = _categoryService.GetAll().ToList();
+            categories.Insert(0, new Category { Id = 0, Name = "Select", Thumbnail = ""});
+            ViewBag.ListOfCategory = categories;
+            if (id == null)
+            {
+                //Create New
+                return View(Post);
+            }
+            //Update
+            Post = _postService.GetById(id);
+            if (Post == null)
+            {
+                return NotFound();
+            }
+            return View(Post);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Form()
+        {
+            if (ModelState.IsValid)
+            {
+                if (Post.Id == 0)
+                {
+                    //CREATE
+                    _postService.Add(Post, "new"); ;
+
+                }
+                else
+                {
+                    _postService.Add(Post, "update");
+                }
+
+
+                return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_ViewAll", _postService.GetAll()) });
+
+            }
+
+            return Json(new { isValid = false, html = Helper.RenderRazorViewToString(this, "Form", Post) });
+
+        }
+
+
+        #region API CALLS
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Json(new { data = _postService.GetAll() });
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            var isDeleted = _postService.Delete(Id);
+            if (isDeleted == false)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+
+            }
+            return Json(new { success = true, message = "Delete successful" });
+
+        }
+
+
+        #endregion
     }
 }

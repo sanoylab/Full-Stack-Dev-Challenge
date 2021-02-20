@@ -43,7 +43,7 @@ namespace News.Service
             return _context.Categories;
         }
 
-        public Category GetById(int id)
+        public Category GetById(int? id)
         {
             return _context.Categories.FirstOrDefault(category => category.Id == id);
         }

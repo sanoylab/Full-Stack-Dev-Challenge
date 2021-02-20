@@ -1,0 +1,99 @@
+﻿@model News.Data.Models.Post
+
+
+@{ Layout = null; }
+
+
+
+<div class="col-12">
+    <form asp-action="Form" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPostNews(this);">
+
+
+        @if (Model.Id != 0)
+        {
+            <input type="hidden" asp-for="Id" />
+        }
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label asp-for="Category.Id" class="control-label">Category</label>
+            <div class="input-group">
+                <select asp-for="Category.Id" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfCategory,"Id", "Name"))"></select>
+                <input type="hidden" asp-for="Category.Name" />
+                <input type="hidden" asp-for="Category.Thumbnail" />
+
+            </div>
+            <span asp-validation-for="Category.Id" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Image" class="control-label"></label>
+            <div class="input-group">
+                
+                <input asp-for="Image" class="form-control" />
+             
+            </div>
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Title" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Description" class="form-control" />
+            </div>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="HeroImage" class="control-label"></label>
+            <div class="input-group">
+               
+                <input asp-for="HeroImage" class="form-control" />
+              
+            </div>
+            <span asp-validation-for="HeroImage" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Body" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Body" class="form-control" />
+            </div>
+            <span asp-validation-for="Body" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CreatedDate" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="CreatedDate" class="form-control" />
+            </div>
+            <span asp-validation-for="CreatedDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Publisher" class="control-label"></label>
+            <div class="input-group">
+
+                <input asp-for="Publisher" class="form-control" />
+            </div>
+            <span asp-validation-for="Publisher" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-12">
+                <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+            </div>
+
+        </div>
+
+
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" /> }

@@ -8,7 +8,7 @@ namespace News.Data
     public interface ICategoryService
     {
         IEnumerable<Category> GetAll();
-        Category GetById(int id);
+        Category GetById(int ? id);
 
         string GetCategoryTitle(int id);
         void Add(Category category, string type);

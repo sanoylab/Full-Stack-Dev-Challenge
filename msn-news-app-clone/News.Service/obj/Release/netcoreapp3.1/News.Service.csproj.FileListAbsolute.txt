@@ -1,0 +1,12 @@
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\bin\Release\netcoreapp3.1\News.Service.deps.json
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\bin\Release\netcoreapp3.1\News.Service.dll
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\bin\Release\netcoreapp3.1\News.Service.pdb
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\bin\Release\netcoreapp3.1\News.Data.dll
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\bin\Release\netcoreapp3.1\News.Data.pdb
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\obj\Release\netcoreapp3.1\News.Service.csprojAssemblyReference.cache
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\obj\Release\netcoreapp3.1\News.Service.AssemblyInfoInputs.cache
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\obj\Release\netcoreapp3.1\News.Service.AssemblyInfo.cs
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\obj\Release\netcoreapp3.1\News.Service.csproj.CoreCompileInputs.cache
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\obj\Release\netcoreapp3.1\News.Service.csproj.CopyComplete
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\obj\Release\netcoreapp3.1\News.Service.dll
+C:\Users\exper\Desktop\Dev\Simple Blog\SimpleBlog\News.Service\obj\Release\netcoreapp3.1\News.Service.pdb
