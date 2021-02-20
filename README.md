@@ -22,7 +22,7 @@ This is a full stack web app development challenge. In this challenge I will try
 
 # DEMOS
 
-- ASP.net Core News App Demo: https://news-app-dotnet-core.herokuapp.com/
+- ASP.net Core News App Demo: https://aspnet-core5-newsapp-docker.herokuapp.com/
 - ASP.net Core 5 MVC Demo: https://aspdot-net-core-app.herokuapp.com/
 - ASP.net MVC 5 Demo: http://aspnetmvc5.aradalej.com
 - MERN (MongoDB/Express/React/Node) Demo: http://gebeyaonline.web.app/
