@@ -23,14 +23,14 @@ This is a full stack web app development challenge. In this challenge I will try
 
 # Technologies
 
-- ASP.net Web Form
-- ASP.net MVC 5
-- ASP.net Web API
 - ASP.net Core 5 MVC
+- ASP.net Web API
+- ASP.net MVC 5
+- MERN Stack (MongoDB, Express, React, Node)
+- ASP.net Web Form
 - ASP.net Core 5 Razor Page
 - ASP.net Core 5 Web API
 - SQL Server
-- MERN Stack (MongoDB, Express, React, Node)
 - PHP
 - Laravel
 - Python
