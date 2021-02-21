@@ -4,22 +4,6 @@ This is a full stack web app development challenge. In this challenge I will try
 
 - PROJECT HOMEPAGE: http://aradalej.com
 
-# Technologies
-
-- ASP.net Web Form
-- ASP.net MVC 5
-- ASP.net Web API
-- ASP.net Core 5 MVC
-- ASP.net Core 5 Razor Page
-- ASP.net Core 5 Web API
-- SQL Server
-- MERN Stack (MongoDB, Express, React, Node)
-- PHP
-- Laravel
-- Python
-- Ruby on Rail
-- Drupal CMS
-
 # DEMOS
 
 - ASP.net Core News App Demo: https://aspnet-core5-newsapp-docker.herokuapp.com/
@@ -36,6 +20,22 @@ This is a full stack web app development challenge. In this challenge I will try
 - Python (Django) Demo:
 - Ruby on Rails Demo:
 - Drupal Demo:
+
+# Technologies
+
+- ASP.net Web Form
+- ASP.net MVC 5
+- ASP.net Web API
+- ASP.net Core 5 MVC
+- ASP.net Core 5 Razor Page
+- ASP.net Core 5 Web API
+- SQL Server
+- MERN Stack (MongoDB, Express, React, Node)
+- PHP
+- Laravel
+- Python
+- Ruby on Rail
+- Drupal CMS
 
 ## Cloud Plateform Used
 
