@@ -15,7 +15,7 @@ namespace Online.Classified.Services
         }
         public IEnumerable<Category> GetAll()
         {
-            return _context.Category;
+            return _context.Category.ToList();
         }
 
         public Category GetById(int? Id)

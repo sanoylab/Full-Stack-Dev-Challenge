@@ -16,12 +16,12 @@ namespace Online.Classified.Services
         }
         public IEnumerable<Data.Models.Classified> GetAll()
         {
-            return _context.Classified.Include(category=>category.Category);
+            return _context.Classified.Include(category=>category.Category).ToList();
         }
 
-        public Data.Models.Classified GetByCategoryId(int? Id)
+        public IEnumerable<Data.Models.Classified> GetByCategoryId(int? Id)
         {
-            return _context.Classified.Include(category=>category.Category).FirstOrDefault(classified => classified.Category.Id == Id);
+            return _context.Classified.Include(category=>category.Category).Where(classified => classified.Category.Id == Id).ToList();
         }
 
         public Data.Models.Classified GetById(int? Id)

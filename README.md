@@ -2,7 +2,7 @@
 
 This is a full stack web app development challenge. In this challenge I will try to implement the same app with different technologies.
 
-- PROJECT HOMEPAGE: http://aradalej.com
+- PROJECT HOMEPAGE: https://fullstack-dev-challenge.herokuapp.com/
 
 # DEMOS
 

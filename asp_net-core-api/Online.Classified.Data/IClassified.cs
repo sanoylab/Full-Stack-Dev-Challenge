@@ -9,6 +9,6 @@ namespace Online.Classified.Data
         IEnumerable<Online.Classified.Data.Models.Classified> GetAll();
 
         Online.Classified.Data.Models.Classified GetById(int? Id);
-        Online.Classified.Data.Models.Classified GetByCategoryId(int? Id);
+        IEnumerable<Online.Classified.Data.Models.Classified> GetByCategoryId(int? Id);
     }
 }

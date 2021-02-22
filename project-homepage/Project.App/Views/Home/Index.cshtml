@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Full Stack Dev Challenge";
+}
+
+@model IEnumerable<Project.Data.Models.Project>
+
+
+<div class="container py-1">
+    <div class="row py-5">
+        <p class="text-center pl-5 pl-5">In the past couple of weeks I started a full stack web app development challenge. <br />
+        In this challenge I will try to implement the same app with different development technologies.<br />
+        Full source code: <a href="https://github.com/sanoylab/Full-Stack-Dev-Challenge" target="_blank">https://github.com/sanoylab/Full-Stack-Dev-Challenge</a> </p>
+    </div>
+    <div class="row" data-masonry='{"percentPosition": true }'>      
+        @foreach (var item in Model)
+        {
+           <div class="col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top thumbnail" src="@Html.DisplayFor(modelItem => item.Thumbnail)" alt="@Html.DisplayFor(modelItem => item.Title)">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            <a href="/Home/Detail/@Html.DisplayFor(modelItem => item.Id)?name=@Html.DisplayFor(modelItem => item.Title)" class="card-text text-center">
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </a>
+                        </h5>
+                       
+                        <p class="d-inline-block text-truncate" style="max-width: 250px;white-space: pre-line"> @Html.DisplayFor(modelItem => item.Description)</p>
+                        @if(item.Link != null)
+                        {
+                            <div><a class="btn btn-success" target="_blank" href="@Html.DisplayFor(modelItem => item.Link)">DEMO</a></div>
+                        }
+                        
+                    </div>
+                </div>
+            </div>          
+
+        }
+    </div>
+</div>
+
+

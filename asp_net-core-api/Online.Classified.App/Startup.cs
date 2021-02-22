@@ -31,6 +31,7 @@ namespace Online.Classified.App
         {
 
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<ICategory, CategoryService>();
             services.AddScoped<IClassified, ClassifiedService>();
             services.AddDbContext<AradaLejDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AradaLejDbConnection")));

@@ -1,0 +1,72 @@
+﻿@{
+
+    News.Data.Models.Post News = ViewData["News"] as News.Data.Models.Post;
+    IEnumerable<News.Data.Models.Post> RelatedNews = ViewData["RelatedNews"] as IEnumerable<News.Data.Models.Post>;
+}
+@{
+    ViewData["Title"] = News.Title;
+}
+
+
+<main>
+    <div class="position-relative overflow-hidden p-3 p-md-5  text-center bg-light"
+         style="background-image: url('@News.HeroImage');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size:cover;
+        min-height: 500px;">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row py-5">
+                    <h1>@(News.Title)</h1>
+                </div>
+
+                <article class="blog-post">
+
+                    <p class="blog-post-meta">
+                        <i class="fas fa-calendar-week"></i>&nbsp;@(News.CreatedDate.ToShortDateString()) by <a href="#"><img src="@News.Publisher" /></a>
+                    </p>
+
+                    <p style="white-space: pre-line"> @News.Body</p>
+                </article><!-- /.blog-post -->
+
+            </div>
+
+            <div class="col-md-4 related">
+                <div class="row ">
+                    <h2>Related News</h2>
+                </div>
+                <ul class="list-group">
+                    @foreach (News.Data.Models.Post news in RelatedNews)
+                    {
+                    <li class="list-group-item">
+
+                        <a class="navbar-brand" href="@news.Id">@news.Title</a>
+                        <span class="badge bg-primary rounded-pill"><i class="fas fa-calendar-week"></i>&nbsp;@news.CreatedDate.ToShortDateString()</span>
+
+                    </li>
+
+
+                    }
+                    </ul>
+</div>
+
+        </div><!-- /.row -->
+    </div>
+
+
+
+</main>
