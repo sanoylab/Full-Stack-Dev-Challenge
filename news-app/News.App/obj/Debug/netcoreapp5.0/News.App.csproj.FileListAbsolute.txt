@@ -82,3 +82,4 @@ C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_core_newsapp
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_core_newsapp\News.App\obj\Debug\netcoreapp5.0\ref\News.App.dll
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_core_newsapp\News.App\obj\Debug\netcoreapp5.0\News.App.pdb
 C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_core_newsapp\News.App\obj\Debug\netcoreapp5.0\News.App.genruntimeconfig.cache
+C:\Users\exper\Desktop\Dev\Full Stack Dev Challenge\Working\asp_net_core_newsapp\News.App\obj\Debug\netcoreapp5.0\Razor\Views\Category\ManageExtNet.cshtml.g.cs

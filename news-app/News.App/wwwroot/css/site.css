@@ -101,4 +101,11 @@ body {
 .card:hover {
     opacity: 0.5 !important;
 }
+.title {
+    background: rgba(0,0,0,.5);
+    
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
 

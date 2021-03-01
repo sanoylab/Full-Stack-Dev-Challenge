@@ -9,5 +9,9 @@ namespace Online.Classified.Data
     {
         IEnumerable<Category> GetAll();
         Category GetById(int? Id);
+        void Create(Category category);
+        void Update(Category category);
+        bool SaveChanges();
+      
     }
 }

@@ -9,7 +9,6 @@ namespace News.Data
     {
         IEnumerable<Category> GetAll();
         Category GetById(int ? id);
-
         string GetCategoryTitle(int id);
         string GetCategoryImage(int id);
         void Add(Category category, string type);

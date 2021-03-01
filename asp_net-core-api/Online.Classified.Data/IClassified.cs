@@ -10,5 +10,10 @@ namespace Online.Classified.Data
 
         Online.Classified.Data.Models.Classified GetById(int? Id);
         IEnumerable<Online.Classified.Data.Models.Classified> GetByCategoryId(int? Id);
+
+        void Create(Online.Classified.Data.Models.Classified classified);
+        void Update(Online.Classified.Data.Models.Classified classified);
+
+        bool SaveChanges();
     }
 }

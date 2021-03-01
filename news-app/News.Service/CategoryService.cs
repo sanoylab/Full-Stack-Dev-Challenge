@@ -50,12 +50,12 @@ namespace News.Service
 
         public string GetCategoryImage(int id)
         {
-            return _context.Categories.FirstOrDefault(category => category.Id == id).Thumbnail;
+            return GetById(id).Thumbnail;
         }
 
         public string GetCategoryTitle(int id)
         {
-            return _context.Categories.FirstOrDefault(category => category.Id == id).Name;
+            return GetById(id).Name;
         }
     }
 }

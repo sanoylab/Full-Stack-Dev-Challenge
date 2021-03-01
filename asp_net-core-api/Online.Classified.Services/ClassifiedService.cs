@@ -14,6 +14,16 @@ namespace Online.Classified.Services
         {
             _context = context;
         }
+
+        public void Create(Data.Models.Classified classified)
+        {
+            if(classified == null)
+            {
+                throw new ArgumentNullException(nameof(classified));
+            }
+            _context.Classified.Add(classified);
+        }
+
         public IEnumerable<Data.Models.Classified> GetAll()
         {
             return _context.Classified.Include(category=>category.Category).ToList();
@@ -27,6 +37,16 @@ namespace Online.Classified.Services
         public Data.Models.Classified GetById(int? Id)
         {
             return _context.Classified.Include(a => a.Category).FirstOrDefault(classified => classified.Id == Id);
+        }
+
+        public bool SaveChanges()
+        {
+            return (_context.SaveChanges() > 0);
+        }
+
+        public void Update(Data.Models.Classified classified)
+        {
+            
         }
     }
 }

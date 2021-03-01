@@ -26,6 +26,10 @@ namespace News.App.Controllers
         {
             return View();
         }
+        public IActionResult ManageExtNet()
+        {
+            return View();
+        }
         public IActionResult Form(int? id)
         {
             Category = new Category();

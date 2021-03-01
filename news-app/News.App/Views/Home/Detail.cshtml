@@ -17,7 +17,7 @@
         background-size:cover;
         min-height: 500px;">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
-
+            <h1 class="title">@(News.Title)</h1>
 
         </div>
 
@@ -30,11 +30,9 @@
 
         <div class="row">
             <div class="col-md-8">
-                <div class="row py-5">
-                    <h1>@(News.Title)</h1>
-                </div>
+               
 
-                <article class="blog-post">
+                <article class="blog-post py-5">
 
                     <p class="blog-post-meta">
                         <i class="fas fa-calendar-week"></i>&nbsp;@(News.CreatedDate.ToShortDateString()) by <a href="#"><img src="@News.Publisher" /></a>

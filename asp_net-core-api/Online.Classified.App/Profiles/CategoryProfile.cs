@@ -13,6 +13,8 @@ namespace Online.Classified.App.Profiles
         public CategoryProfile()
         {
             CreateMap<Category, CategoryReadModel>();
+            CreateMap<CategoryCreateModel, Category>();
+            CreateMap<CategoryUpdateModel, Category>();
         }
     }
 }

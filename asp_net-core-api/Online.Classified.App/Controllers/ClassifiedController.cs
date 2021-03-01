@@ -39,7 +39,7 @@ namespace Online.Classified.App.Controllers
             return Ok(_mapper.Map<ClassifiedReadModel>(classified));
           
         }
-        [HttpGet("Category/{categoryId}")]
+        [HttpGet("Category/{categoryId}", Name = "GetByCategoryId")]
         public ActionResult <IEnumerable<ClassifiedReadModel>> GetByCategoryId(int categoryId)
         {
             var classified =  _classifiedService.GetByCategoryId(categoryId);
@@ -49,6 +49,31 @@ namespace Online.Classified.App.Controllers
             }
             return Ok(_mapper.Map<IEnumerable<ClassifiedReadModel>>(classified));
            
+        }
+
+        [HttpPost]
+        public ActionResult <ClassifiedCreateModel> Create(Online.Classified.Data.Models.Classified classified)
+        {
+            var classifiedModel = _mapper.Map<Online.Classified.Data.Models.Classified>(classified);
+            _classifiedService.Create(classifiedModel);
+            _classifiedService.SaveChanges();
+            var classifiedReadModel = _mapper.Map<ClassifiedReadModel>(classifiedModel);
+
+            return CreatedAtRoute(nameof(GetByCategoryId), new { Id = classifiedModel.Id }, classifiedReadModel);
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult<CategoryReadModel> Update(int id, ClassifiedUpdateModel classified)
+        {
+            var filteredClassified = _classifiedService.GetById(id);
+            if (filteredClassified == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(classified, filteredClassified);
+            _classifiedService.Update(filteredClassified);
+          //  _classifiedService.SaveChanges();
+            return NoContent();
         }
     }
 }

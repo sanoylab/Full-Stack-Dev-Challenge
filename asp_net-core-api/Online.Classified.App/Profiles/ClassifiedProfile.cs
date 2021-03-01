@@ -12,6 +12,8 @@ namespace Online.Classified.App.Profiles
         public ClassifiedProfile()
         {
             CreateMap<Online.Classified.Data.Models.Classified, ClassifiedReadModel>();
+            CreateMap<ClassifiedCreateModel, Online.Classified.Data.Models.Classified>();
+            CreateMap<CategoryUpdateModel, Online.Classified.Data.Models.Classified>();
         }
     }
 }

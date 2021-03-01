@@ -15,6 +15,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using System.Reflection;
+using System.IO;
+
 namespace Online.Classified.App
 {
     public class Startup
@@ -35,10 +38,29 @@ namespace Online.Classified.App
             services.AddScoped<ICategory, CategoryService>();
             services.AddScoped<IClassified, ClassifiedService>();
             services.AddDbContext<AradaLejDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AradaLejDbConnection")));
+          
+
+            // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Online.Classified.App", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Online Classified Application API",
+                    Description = "This app is designed for the user who want to sell items online.",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Yonas Y",
+                        Email = "expertsanoy@gmail.com",
+                        Url = new Uri("https://github.com/sanoylab"),
+                    }
+                });
             });
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,7 +87,7 @@ namespace Online.Classified.App
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Online Classfied App API V1");
             });
 
         }
