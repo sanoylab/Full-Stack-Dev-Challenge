@@ -6,13 +6,12 @@ This is a full stack web app development challenge. In this challenge I will try
 
 # DEMOS
 
+- MERN (MongoDB/Express/React/Node) Demo: http://gebeyaonline.web.app/
 - ASP.net Core News App Demo: https://aspnet-core5-newsapp-docker.herokuapp.com/
 - ASP.net Core 5 MVC Demo: https://aspdot-net-core-app.herokuapp.com/
 - ASP.net Core Web API Demo: https://aspnet-core-api-adapp-docker.herokuapp.com/swagger/index.html
 - ASP.net MVC 5 Demo: http://aspnetmvc5.aradalej.com
-- MERN (MongoDB/Express/React/Node) Demo: http://gebeyaonline.web.app/
 - Node (Express) Backend Demo: https://kuralio.herokuapp.com/api/v1/docs/
-- ASP.net Core Razor Page Demo:
 - ASP.net Web API Demo:
 - ASP.net Web Form Demo: http://aspnetwebform.aradalej.com/
 - PHP Demo:
