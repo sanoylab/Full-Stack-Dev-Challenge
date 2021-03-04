@@ -23,7 +23,12 @@ namespace News.App
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+            services.AddCors(o => o.AddPolicy("AllowAllAccess", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
             services.AddControllersWithViews();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IPostService, PostService>();
@@ -44,7 +49,7 @@ namespace News.App
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
-
+            app.UseCors("AllowAllAccess");
             app.UseRouting();
 
             app.UseAuthorization();
